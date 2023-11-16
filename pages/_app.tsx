@@ -2,7 +2,9 @@ import React from 'react'
 import { type AppProps } from 'next/app'
 import Head from 'next/head'
 
+import '@aws-amplify/ui-react/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 import '../styles/style.scss'
 import '../styles/menu.scss'
 
