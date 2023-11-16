@@ -22,6 +22,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.0.1",
     "@types/node": "^20.9.0",
     "aws-amplify": "^6.0.2",
     "aws-amplify-react": "^5.1.43",
