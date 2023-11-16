@@ -6,7 +6,6 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   output: 'export',
-  distDir: './dist/',
   basePath: isProd ? SUB_DIRECTORY : '',
   assetPrefix: isProd ? SUB_DIRECTORY : '',
   publicRuntimeConfig: {
