@@ -38,6 +38,9 @@
           "appId": "d2um7ehod6ahmg",
           "type": "manual"
         }
+      },
+      "auth": {
+        "learningamplifyauth80c574dc": {}
       }
     }
   }
