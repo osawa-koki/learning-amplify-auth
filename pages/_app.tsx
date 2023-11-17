@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { type NextComponentType, type NextPageContext } from 'next'
 import { type AppProps } from 'next/app'
 import Head from 'next/head'
 
@@ -11,7 +12,35 @@ import '../styles/menu.scss'
 import setting from '../setting'
 import Layout from '../components/Layout'
 
-export default function MyApp ({ Component, pageProps }: AppProps): React.JSX.Element {
+import { Amplify } from 'aws-amplify'
+import type { WithAuthenticatorProps } from '@aws-amplify/ui-react'
+import { withAuthenticator } from '@aws-amplify/ui-react'
+
+import awsconfig from '../src/aws-exports'
+import { Alert } from 'react-bootstrap'
+
+Amplify.configure(awsconfig)
+
+export function App ({ user, signOut, Component }: WithAuthenticatorProps & { pageProps: any, Component: NextComponentType<NextPageContext, any, any> }): React.JSX.Element {
+  if (user == null) {
+    return (
+      <Alert variant='danger'>
+        You are not signed in.
+      </Alert>
+    )
+  }
+
+  return (
+    <>
+      <Component user={user} signOut={signOut} />
+    </>
+  )
+}
+
+export default function MyApp ({ Component, pageProps, router }: AppProps): React.JSX.Element {
+  useEffect(() => {
+  }, [router.pathname])
+
   return (
     <>
       <Head>
@@ -25,7 +54,7 @@ export default function MyApp ({ Component, pageProps }: AppProps): React.JSX.El
         />
       </Head>
       <Layout>
-        <Component {...pageProps} />
+        {withAuthenticator(App)({ Component, pageProps })}
       </Layout>
     </>
   )

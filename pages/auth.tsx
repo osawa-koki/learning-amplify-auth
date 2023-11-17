@@ -1,19 +1,16 @@
 import React from 'react'
-import { Amplify } from 'aws-amplify'
-import type { WithAuthenticatorProps } from '@aws-amplify/ui-react'
-import { withAuthenticator } from '@aws-amplify/ui-react'
+import { type AuthUser } from 'aws-amplify/auth'
 
-import awsconfig from '../src/aws-exports'
+interface Props {
+  user: AuthUser
+  signOut: () => void
+}
 
-Amplify.configure(awsconfig)
+export default function App (props: Props): React.JSX.Element {
+  const { user, signOut } = props
 
-export function App ({ signOut, user }: WithAuthenticatorProps): React.JSX.Element {
   return (
     <>
-      <h1>Hello {user?.username}</h1>
-      <button onClick={signOut}>Sign out</button>
     </>
   )
 }
-
-export default withAuthenticator(App)
