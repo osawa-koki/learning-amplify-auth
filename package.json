@@ -1,6 +1,6 @@
 {
   "name": "learning-amplify-auth",
-  "description": "🫗🫗🫗 Amplifyで認証機能を実装してみる！  ",
+  "description": "🫗🫗🫗 Amplifyで認証機能を実装してみる！",
   "author": "osawa-koki",
   "license": "Apache-2.0",
   "repository": {
@@ -22,7 +22,10 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.0.1",
     "@types/node": "^20.9.1",
+    "aws-amplify": "^6.0.2",
+    "aws-amplify-react": "^5.1.43",
     "bootstrap": "^5.3.2",
     "next": "^14.0.3",
     "react": "^18.2.0",

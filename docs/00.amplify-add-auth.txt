@@ -1,0 +1,35 @@
+amplify add auth
+Using service: Cognito, provided by: awscloudformation
+
+ The current configured provider is Amazon Cognito.
+
+ Do you want to use the default authentication and security configuration? I want to learn more.
+
+This utility allows you to set up Amazon Cognito User Pools and Identity Pools for your application.
+
+Amazon Cognito User Pool makes it easy for developers to add sign-up and sign-in functionality to web and mobile applicati
+ons. It serves as your own identity provider to maintain a user directory. It supports user registration and sign-in, as w
+ell as provisioning identity tokens for signed-in users.
+
+Amazon Cognito identity pools provide temporary AWS credentials for users who are guests (unauthenticated) and for users w
+ho have been authenticated and received a token. An identity pool is a store of user identity data specific to your accoun
+t.
+
+If you choose to use the default configuration, this utility will set up both a Userpool and an Identity Pool.
+
+If you choose the 'Default configuration with Social Provider (Federation)', the providers will be federated with Cognito
+User Pools.
+
+In either case, User Pools will be federated with Identity Pools allowing any users logging in to get both identity tokens
+ as well as AWS Credentials.
+
+
+ Do you want to use the default authentication and security configuration? Default configuration
+ Warning: you will not be able to edit these selections.
+ How do you want users to be able to sign in? Email
+ Do you want to configure advanced settings? No, I am done.
+✅ Successfully added auth resource learningamplifyauth80c574dc locally
+
+✅ Some next steps:
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
