@@ -47,4 +47,4 @@ GitHub Actionsのシークレット情報として以下の情報を設定して
 | AWS_ACCESS_KEY_ID | AWSのアクセスキー |
 | AWS_SECRET_ACCESS_KEY | AWSのシークレットアクセスキー |
 | AWS_REGION | AWSのリージョン |
-| AMPILFY_APP_ID | AmplifyのアプリID(`./amplify/team-provider-info.json`に記載) |
+| AMPLIFY_APP_ID | AmplifyのアプリID(`./amplify/team-provider-info.json`に記載) |
